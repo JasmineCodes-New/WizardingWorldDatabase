@@ -7,8 +7,9 @@ Jasmine Irvin
 Final Project
 
 ## Description
-This project will be using Django to create a simple application for this project module. 
-It makes use of Python, Django, and Bootstrap CSS. 
+This project focuses on API pulling and displaying that information within a site. 
+Makes use of Django, HTML, and CSS. 
+API pulled from: https://hp-api.onrender.com/
 
 ## Pip Install Instructions
 It is essential you run this command so all the required installs are imported to your computer.
