@@ -27,6 +27,16 @@ Then:
 python manage.py migrate
 ```
 
+## Populate
+After migrate, run
+```
+python manage.py fetchdata
+```
+Then:
+```
+python manage.py fetchspells
+```
+
 ## Running Project
 To run the project, you will need to run the command in the terminal:
 ```
