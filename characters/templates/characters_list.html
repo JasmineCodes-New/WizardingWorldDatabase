@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Characters List</title>
+    <style>
+        .character-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .character-card {
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .character-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .character-info {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Characters List</h1>
+    <div class="character-container">
+        {% for character in characters %}
+            <div class="character-card">
+                {% if character.image_url %}
+                    <img src="{{ character.image_url }}" alt="{{ character.name }}">
+                {% endif %}
+                <div class="character-info">
+                    <strong>Name:</strong> {{ character.name }}<br>
+                    <strong>Species:</strong> {{ character.species }}<br>
+                    <strong>Gender:</strong> {{ character.gender }}<br>
+                    <strong>House:</strong> {{ character.house }}<br>
+                    <strong>Date of Birth:</strong> {{ character.date_of_birth }}<br>
+                    <strong>Year of Birth:</strong> {{ character.year_of_birth }}<br>
+                    <strong>Wizard:</strong> {{ character.wizard }}<br>
+                    <strong>Ancestry:</strong> {{ character.ancestry }}<br>
+                    <strong>Eye Color:</strong> {{ character.eye_color }}<br>
+                    <strong>Hair Color:</strong> {{ character.hair_color }}<br>
+                    <strong>Patronus:</strong> {{ character.patronus }}<br>
+                    <strong>Hogwarts Student:</strong> {{ character.hogwarts_student }}<br>
+                    <strong>Hogwarts Staff:</strong> {{ character.hogwarts_staff }}<br>
+                    <strong>Actor:</strong> {{ character.actor }}<br>
+                    <strong>Alive:</strong> {{ character.alive }}<br>
+                </div>
+            </div>
+        {% empty %}
+            <p>No characters found.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+
